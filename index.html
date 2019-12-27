@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Alexander Zhong</title>
+	<meta charset="UTF-8">
+	<link rel="icon" type="image/png" href="./assets/favicon/favicon-black.png" sizes="192x192">
+	<link href="./assets/css/style.css" type="text/css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Poiret+One&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap" rel="stylesheet">
+	<!-- <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet"> -->
+
+	<!-- JS libraries -->
+	<!-- <script src="https://unpkg.com/aos@next/dist/aos.js" defer></script> -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" defer></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" defer></script>
+    <script src="assets/js/script.js" defer></script>
+</head>
+
+<body> 
+	<!-- First Layer -->
+	<img class="background" id="stars" src="./assets/img/background-better.png">
+	<img class="background overlay" id="clouds" src="./assets/img/clouds-extended.png">
+
+	<!-- Second Layer -->
+	<img id="background2" src="./assets/img/background-part2.png">
+	<img id="bridge" src="./assets/img/bridge.png">
+	<img id="building2" src='./assets/img/building2.png'>
+	<img id="building1" src='./assets/img/buildings_1.png'>
+
+	<h3 id="paper" onclick="Paper();">Research Paper</h3>
+
+	<!-- <img class="stars" src> -->
+	<!-- <div class="stars"></div> -->
+	<div class="twinkling"></div>
+	<!-- <div class="clouds"></div> -->
+
+	<!-- Signals -->
+	<img id="githubimg" src="./assets/img/githubsignal.png">
+	<img id="linkedinimg" src="./assets/img/linkedinsignal2.png">
+	<img id="resumeimg" src="./assets/img/resumesignal.png">
+
+	
+	<div class="name">
+	<h1 class="main">Alexander Zhong</h1>
+
+<!-- Buttons for other socials -->
+		<div class="button-container">
+			<img class="img-button social" id="ghButton" src="./assets/img/github.png" height="50px" width="50px" onclick="GitHub();"/>
+			<img class="img-button social" id="rButton" src="./assets/img/resume.png" height="50px" width="50px" onclick="Resume();"/>
+			<img class="img-button social" id="liButton" src="./assets/img/linkedin.png" height="50px" width="50px" onclick="LinkedIn();"/>
+
+
+<!-- 			<div id="ghGlow" height="50px" width="50px"></div>
+			<div id="rGlow" height="50px" width="40px"></div>
+			<div id="liGlow" height="50px" width="50px"></div> -->
+<!--
+			<a class="social" href="./assets/documents/SophomoreResumeV2.pdf">GitHub</a>
+			<a class="social" href="./assets/documents/SophomoreResumeV2.pdf">LinkedIn</a>
+		-->
+		</div>
+	</div>
+
+	<div id="bio-button" type="button" onclick="revealBio();">
+		<h2>About Me!</h2>
+		<!-- 840x859 -->
+		<img background="transparent" src="./assets/img/down-arrow.png" height="12px" width="30px">
+	</div>
+
+
+	<div id="back-button" type="button" onclick="goBack();">
+		<img background="transparent" id="up" src="./assets/img/down-arrow.png" height="12px" width="30px">
+		<h2>Back</h2>
+		<!-- 840x859 -->
+		
+	</div>
+
+	<div id="bio">
+		<h2>Hi, I'm Alex!</h2>
+		<p>
+		I'm a 19 year old Math and Computer Science Major from Wayland, MA, currently living in Pittsburgh, PA at Carnegie Mellon University. I really enjoy coding and problem solving, and have done a couple hackathons and made a couple projects, including this website. My first programming language I learned was Java, so that is the one that I'm most familiar with and my favorite one to program in, but I've learned some other ones along the way, including Python and the HTML, CSS, JS set (still learning the libraries of JS though) through classes, projects, and self-study. I'm also very interested in biology, and I have published a first-author research paper in the journal "Purinergic Signaling" and several co-authored research papers.
+		</p>
+		<p>
+			Some fun facts about me: I'm a musician; I've played the piano for 16 years and the violin for 11 years. At some point, I will probably include some of my playing on the website. Also, since I'm from Boston, I'm a pretty big Celtics fan, and as of the time I am writing this, their season is going well, so shout out to them.
+		</p>
+		<p>
+			As a side note, some of my projects are currently in the process of being added to my github, so don't fret if there is nothing there (since most of my projects are on my computer's hard drive). The projects will be uploaded shortly, including the code for this website. 
+		</p>
+	</div>
+
+<!-- Contact information + form -->
+<!-- 
+<form> 
+<h2>Contact me!</h2>
+</form>
+-->
+</body>
+
+
+</html>
