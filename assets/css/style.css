@@ -1,0 +1,511 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+@font-face {
+    font-family: "Beon";
+    src: url("../fonts/Beon.otf");
+}
+
+/*Background*/
+.background {
+    z-index: -2;
+    position: absolute;
+    /*height: 938px;*/
+    /*width: 100%;*/
+    -webkit-transition: -webkit-transform 2s ease-in-out;
+}
+
+.goDown {
+    transform:translate(0px, -938px);
+    transition: transform 2s ease-in-out;
+}
+
+/*.goUp {
+    -webkit-transform:translate(0px, 938px);
+}*/
+
+#background2 {
+    z-index: -2;
+    position: absolute;
+    top: 930px;
+    /*display: none;*/
+    /*height: 938px;*/
+    /*width: 100%;*/
+    -webkit-transition: -webkit-transform 2s ease-in-out;
+}
+
+#bridge {
+    position: absolute;
+    z-index: -1;
+    top: 938px;
+}
+
+#building1 {
+    position: absolute;
+    opacity: 1;
+    z-index:-2;
+    top: 938px;
+}
+
+#building2 {
+    position: absolute;
+    opacity: 1;
+    z-index: -2;
+    top: 938px;
+}
+
+.overlay {
+    opacity: .08;
+    z-index: 0;
+}
+
+#paper {
+    font-family: "Beon";
+    font-size: 30px;
+    color: #0cbfe9;
+    position: absolute;
+    text-align: center;
+    width: 200px;
+    top: 1200px;
+    left: 1225px;
+    text-shadow: 0 0 5px #0cbfe9;
+    cursor: pointer;
+    z-index: 1;
+}
+
+#paper:hover {
+    text-shadow: 0 0 10px #0cbfe9;
+}
+
+/*Background Animations*/
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+@-webkit-keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+@-moz-keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+@-ms-keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+
+.stars, .twinkling, .clouds {
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  width:100%;
+  height:100%;
+  display:block;
+}
+
+.twinkling{
+    background: transparent url("../img/twinkling-blue.png") repeat top center;
+    z-index:-1;
+
+    -moz-animation:move-twink-back 200s linear infinite;
+    -ms-animation:move-twink-back 200s linear infinite;
+    -o-animation:move-twink-back 200s linear infinite;
+    -webkit-animation:move-twink-back 200s linear infinite;
+    animation:move-twink-back 200s linear infinite;
+    /*animation-name: move-twink-back; 
+    animation-duration: 200s;
+    animation-duration: linear;
+    animation-iteration-count: infinite;*/
+}
+
+.stars {
+  background:#000 url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top center;
+  z-index:-2;
+  display: absolute;
+}
+
+/*Transition Buttons*/
+#bio-button {
+    position: relative;
+    text-align: center;
+    top: 880px;
+    width: 70px;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+    background: transparent;
+}
+
+#bio-button h2 {
+    color: white;
+    font-size: 15px;
+    font-family: "Open Sans Condensed";
+    letter-spacing: .08em;
+}
+
+.disappearUp {
+    transform: translate(0px, -100px);
+    opacity: 0;
+    transition: transform .4s ease-in-out, opacity .4s ease-in-out;
+    /*animation: fadeOut 2s linear forwards;*/
+}
+
+.disappearDown {
+    transform: translate(0px, 100px);
+    opacity: 0;
+    transition: transform .4s ease-in-out, opacity .4s ease-in-out;
+    /*animation: fadeOut 2s linear forwards;*/
+}
+
+#bio-button:hover {
+    opacity: .5;
+}
+
+#back-button {
+    position: relative;
+    text-align: center;
+    top: 20px;
+    width: 70px;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+    background: transparent;
+    display: none;
+}
+
+#back-button h2 {
+    color: white;
+    font-size: 15px;
+    font-family: "Open Sans Condensed";
+    letter-spacing: .08em;
+}
+
+#back-button:hover {
+    opacity: .5;
+}
+
+#up {
+    transform: rotate(180deg);
+}
+
+/*Bio*/
+#bio {
+    position: relative;
+    text-align: center;
+    color: white;
+    top: 70px;
+    font-size: 18px;
+/*    width: 560px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;*/
+    border-radius: 15px;
+    font-family: "Open Sans Condensed";
+    letter-spacing: .05em;
+    display:none;
+    /*background: rgba(0, 0, 0, .5);*/
+}
+
+#bio h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+#bio p {
+    position: relative;
+    text-align: left;
+    margin-bottom: 10px;
+    width: 560px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/*Name and Links*/
+.name {
+    z-index: 2;
+    display: block;
+    min-width: 450px;
+    width: 600px;
+    position: fixed;
+    top: 620px;
+    left: 50%;
+    margin-left: -300px;
+}
+
+.main {
+    text-align: center;
+    font-family: "Poiret One", sans-serif;
+    letter-spacing: .05em;
+    color: white;
+    top: 100px;
+    font-size: 50px;
+    margin-bottom: 15px;
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+#githubimg {
+    position: absolute;
+    top: 80px;
+    left: 550px;
+    z-index: 0;
+    display: none;
+    opacity: .95;
+}
+
+#linkedinimg {
+    position: absolute;
+    top: 65px;
+    left: 600px;
+    z-index: 0;
+    display: none;
+    opacity: .95;
+}
+
+#resumeimg {
+    position: absolute;
+    top: 65px;
+    left: 600px;
+    z-index: 0;
+    display: none;
+    opacity: .95;
+}
+
+.img-button {
+    cursor: pointer;
+}
+
+.img-button:hover {
+    opacity: .5;
+}
+
+.button-container {
+    display: grid;
+    /*text-align: center;*/
+    grid-row-gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "gh r li";
+    justify-items: center;
+    align-items: center;
+    width: 450px;
+    margin: auto;
+    opacity: 0;
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    animation-delay: .5s;
+    animation-fill-mode: forwards;
+}
+
+.social {
+    align-self: center; 
+    filter: invert(100%);
+}
+
+a {
+    display: inline-block;
+    font-size: 20px;
+}
+
+#ghButton {
+    grid-area: gh;
+}
+
+#rButton {
+    grid-area: r;
+}
+
+#liButton {
+    grid-area: li;
+}
+
+#ghButton:hover {
+    opacity: .5;
+}
+
+
+#rButton:hover {
+    opacity: .5;
+}
+
+#liButton:hover {
+    opacity: .5;
+/*    border-radius: 7px;
+    -moz-box-shadow: 0 0 10px #fff;
+    -webkit-box-shadow: 0 0 10px #fff;
+    box-shadow: 0px 0px 10px #fff;*/
+}
+
+
+
+/*#ghGlow {
+    grid-area: gh;
+}
+
+#ghGlow {
+    border-radius: 50%;
+    -moz-box-shadow: 0 0 10px #fff;
+    -webkit-box-shadow: 0 0 10px #fff;
+    box-shadow: 0px 0px 10px #fff;
+}
+
+#rGlow {
+    grid-area: r;
+}
+
+#rGlow:hover {
+    border-radius: 7px;
+    -moz-box-shadow: 0 0 10px #fff;
+    -webkit-box-shadow: 0 0 10px #fff;
+    box-shadow: 0px 0px 10px #fff;
+}
+
+#liGlow {
+    grid-area: li;
+    background: white;
+}
+
+#liGlow:hover {
+    border-radius: 7px;
+    -moz-box-shadow: 0 0 10px #fff;
+    -webkit-box-shadow: 0 0 10px #fff;
+    box-shadow: 0px 0px 10px #fff;
+}*/
+
+
+
+
+/*@keyframes moving-clouds {
+    from {left: 0px;}
+    to {left: 100%;}
+}*/
+/*
+@-webkit-keyframes moving-clouds {
+    0% {left: 0px; top: 0px;}
+    100% {left: 1620px; top: 938px;}
+}
+@-moz-keyframes moving-clouds {
+    0% {left: 0px; top: 0px;}
+    100% {left: 1620px; top: 938px;}
+}
+@-ms-keyframes moving-clouds {
+    0% {left: 0px; top: 0px;}
+    100% {left: 1620px; top: 938px;}
+}*/
+
+/*#clouds {
+    position: relative;
+    height: 938px;
+    width: 1620px;
+    moz-animation: moving-clouds 10s linear infinite;
+    -ms-animation: moving-clouds 10s linear infinite;
+    -o-animation: moving-clouds 10s linear infinite;
+    -webkit-animation: moving-clouds 10s linear infinite;
+    animation-name: moving-clouds;
+    animation-duration: 10s; 
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    z-index: 0;
+}*/
+
+
+/*header {
+    background-color:rgba(33, 33, 33, 0.9);
+    color:#ffffff;
+    display:block;
+    font: 14px/1.3 Arial,sans-serif;
+    height:50px;
+    position:relative;
+    z-index:5;
+}
+h2{
+    margin-top: 30px;
+    text-align: center;
+}
+header h2{
+    font-size: 22px;
+    margin: 0 auto;
+    padding: 10px 0;
+    width: 80%;
+    text-align: center;
+}
+header a, a:visited {
+    text-decoration:none;
+    color:#fcfcfc;
+}*/
+
+
+
+/*
+@keyframes move-clouds-back {
+    from {background-position:0 0;}
+    to {background-position:10000px 0;}
+}
+@-webkit-keyframes move-clouds-back {
+    from {background-position:0 0;}
+    to {background-position:10000px 0;}
+}
+@-moz-keyframes move-clouds-back {
+    from {background-position:0 0;}
+    to {background-position:10000px 0;}
+}
+@-ms-keyframes move-clouds-back {
+    from {background-position: 0;}
+    to {background-position:10000px 0;}
+}
+
+.stars, .twinkling, .clouds {
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  width:100%;
+  height:100%;
+  display:block;
+}
+
+.stars {
+  background:#000 url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top center;
+  z-index:0;
+}
+
+.twinkling{
+  background:transparent url(http://www.script-tutorials.com/demos/360/images/twinkling.png) repeat top center;
+  z-index:1;
+
+  -moz-animation:move-twink-back 200s linear infinite;
+  -ms-animation:move-twink-back 200s linear infinite;
+  -o-animation:move-twink-back 200s linear infinite;
+  -webkit-animation:move-twink-back 200s linear infinite;
+  animation:move-twink-back 200s linear infinite;
+}
+
+.clouds{
+    background:transparent url(http://www.script-tutorials.com/demos/360/images/clouds3.png) repeat top center;
+    z-index:3;
+
+  -moz-animation:move-clouds-back 200s linear infinite;
+  -ms-animation:move-clouds-back 200s linear infinite;
+  -o-animation:move-clouds-back 200s linear infinite;
+  -webkit-animation:move-clouds-back 200s linear infinite;
+  animation:move-clouds-back 200s linear infinite;
+}*/
