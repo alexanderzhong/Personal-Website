@@ -14,6 +14,81 @@ body {
     src: url("../fonts/Beon.otf");
 }
 
+/*New Stuff*/
+#resume_body {
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    height: 820px;
+    margin-left: -460px;
+    background: #161c27;
+
+    z-index: 5;
+    box-shadow: 0 0 10px black;
+}
+
+#close_resume {
+    cursor: pointer;
+}
+
+#resume-header {
+    margin-top: 20px;
+    /*margin-bottom: 20px;*/
+    margin-left: 20px;
+    height: 50px;
+}
+
+#resume-header h1 {
+    display: inline;
+    color: white;
+    font-family: "Open Sans Condensed";
+}
+
+#resume-display {
+    width: 900px;
+    height: 700px;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#contact {
+    display: none;
+    position: absolute;
+    margin-left: -200px;
+    top: 350px;
+    /*margin-top: 300px;*/
+    left: 50%;
+    top: 400px;
+    width: 400px;
+    height: 700px;
+}
+
+.name h2 {
+    color: white;
+    font-size: 25px;
+    font-family: "Open Sans Condensed";
+    position: relative;
+    letter-spacing: .08em;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-bottom: 10px;
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+h2 {
+    font-family: "Open Sans Condensed";
+    color: white;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /*Background*/
 .background {
     z-index: -2;
@@ -32,7 +107,7 @@ body {
     -webkit-transform:translate(0px, 938px);
 }*/
 
-#background2 {
+.background2 {
     z-index: -2;
     position: absolute;
     top: 930px;
@@ -44,8 +119,14 @@ body {
 
 #bridge {
     position: absolute;
-    z-index: -1;
-    top: 938px;
+    z-index: 0;
+    top: 1626px;
+    /*top: 938px;*/
+    height: 250px;
+    width: 100%;
+    object-fit: none;
+    object-position: 0 100%;
+    overflow: hidden;
 }
 
 #building1 {
@@ -67,22 +148,62 @@ body {
     z-index: 0;
 }
 
-#paper {
+.links {
     font-family: "Beon";
-    font-size: 30px;
-    color: #0cbfe9;
+    font-size: 20px;
+    /*color: #0cbfe9;*/
+    display: block;
     position: absolute;
     text-align: center;
-    width: 200px;
-    top: 1200px;
-    left: 1225px;
-    text-shadow: 0 0 5px #0cbfe9;
+    width: 100px;
+    /*top: 1200px;*/
+    /*left: 1225px;*/
+    /*text-shadow: 0 0 5px #0cbfe9;*/
     cursor: pointer;
-    z-index: 1;
+    z-index: 0;
 }
 
-#paper:hover {
-    text-shadow: 0 0 10px #0cbfe9;
+.links h3 {
+    transform-origin: center center;
+    transform: rotate(-50deg);
+}
+
+#rp span {animation: blink linear infinite 2s;}
+#ab span {animation: blink linear infinite 3s;}
+#co span {animation: blink linear infinite 5s;}
+
+@keyframes blink {
+  78% {
+    color: inherit;
+    text-shadow: inherit;
+  }
+  79%{
+     color: #333;
+  }
+  80% {
+    
+    text-shadow: none;
+  }
+  81% {
+    color: inherit;
+    text-shadow: inherit;
+  }
+  82% {
+    color: #333;
+    text-shadow: none;
+  }
+  83% {
+    color: inherit;
+    text-shadow: inherit;
+  }
+  92% {
+    color: #333;
+    text-shadow: none;
+  }
+  92.5% {
+    color: inherit;
+    text-shadow: inherit;
+  }
 }
 
 /*Background Animations*/
@@ -182,6 +303,7 @@ body {
     text-align: center;
     top: 20px;
     width: 70px;
+    height: 50px;
     margin-left: auto;
     margin-right: auto;
     cursor: pointer;
@@ -209,22 +331,33 @@ body {
     position: relative;
     text-align: center;
     color: white;
-    top: 70px;
+    top: 30px;
     font-size: 18px;
-/*    width: 560px;
+    width: 600px;
     margin-left: auto;
     margin-right: auto;
-    padding: 20px;*/
-    border-radius: 15px;
+    padding: 20px;
+    /*border-radius: 15px;*/
     font-family: "Open Sans Condensed";
     letter-spacing: .05em;
     display:none;
+    box-shadow: 0 0 10px black;
+    background: #37474f;
     /*background: rgba(0, 0, 0, .5);*/
 }
+
+.fadeDown {
+    transform: translate(0px, 40px);
+    transition: transform .3s ease-in-out;
+}
+/*#161c27*/
+
+ /*margin: 40px 40px;"*/
 
 #bio h2 {
     font-size: 40px;
     margin-bottom: 20px;
+    pointer-events: inherit;
 }
 
 #bio p {
@@ -234,6 +367,7 @@ body {
     width: 560px;
     margin-left: auto;
     margin-right: auto;
+    pointer-events: inherit;
 }
 
 
@@ -256,7 +390,7 @@ body {
     color: white;
     top: 100px;
     font-size: 50px;
-    margin-bottom: 15px;
+    margin-bottom: 0px;
     animation-name: fadeIn;
     animation-duration: 1s;
     animation-fill-mode: forwards;
