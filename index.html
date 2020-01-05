@@ -24,12 +24,18 @@
 	<img class="background overlay" id="clouds" src="./assets/img/clouds-extended.png">
 
 	<!-- Second Layer -->
-	<img id="background2" src="./assets/img/background-part2.png">
-	<img id="bridge" src="./assets/img/bridge.png">
-	<img id="building2" src='./assets/img/building2.png'>
-	<img id="building1" src='./assets/img/buildings_1.png'>
+	<h3 class="links" id="rp" style="top:1730px; left:560px; color: #0cbfe9; text-shadow: 0 0 5px #0cbfe9;" onclick="Paper();"><span>Re</span>search Pa<span>pe</span>r</h3>
+	<h3 class="links" id="ab" style="top:1765px; left:777px; color: #8CFF00; text-shadow: 0 0 5px #8CFF00;" onclick="bioToggle();">Ab<span>o</span>ut</h3>
+	<h3 class="links" id="co" style="top:1745px; left:1005px; color: #CE00FF; text-shadow: 0 0 5px #CE00FF;" onclick="openMail();">Con<span>t</span>ac<span>t</span></h3>
+	<!-- onclick="contactToggle();" -->
 
-	<h3 id="paper" onclick="Paper();">Research Paper</h3>
+	<!-- <img class="background2" src="./assets/img/background-part2.png"> -->
+	<!-- <img id="bridge" src="./assets/img/bridge.png"> -->
+	<!-- <img id="building2" src='./assets/img/building2.png'> -->
+	<!-- <img id="building1" src='./assets/img/buildings_1.png'> -->
+	<img class="background2" src='./assets/img/buildings-test.png'>
+	<!-- style="top: 800px;" -->
+	<!-- style="top: 1300px;" -->
 
 	<!-- <img class="stars" src> -->
 	<!-- <div class="stars"></div> -->
@@ -41,15 +47,46 @@
 	<img id="linkedinimg" src="./assets/img/linkedinsignal2.png">
 	<img id="resumeimg" src="./assets/img/resumesignal.png">
 
+	<!-- Resume -->
+	<div id="resume_body">
+		<div id="resume-header">
+			<h1>My Resume</h1>
+			<img id="close_resume" src="./assets/img/close.png" style="width: 15px; height: 15px; margin-left: 750px" onclick="closeResume();">
+		</div>
+		<embed id="resume-display" src="assets/documents/SophomoreResumeV2.pdf" type="application/pdf">
+		</embed>
+	</div>
+
+<!-- 	    <div class="modal fade" id="resumeModal" role="dialog">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h2 class="modal-title">MY RESUMÉ</h2>
+                </div>
+                <div class="modal-body">
+                    <embed id="resume-display" src="assets/resume/Resume%20-%20Navid%20Mamoon.pdf" type="application/pdf">
+                </div>
+            </div>
+        </div> -->
+
 	
 	<div class="name">
 	<h1 class="main">Alexander Zhong</h1>
 
+	<h2>Web Developer | Musician | Designer | Researcher</h2>
+
 <!-- Buttons for other socials -->
 		<div class="button-container">
+			<span title="GitHub">
 			<img class="img-button social" id="ghButton" src="./assets/img/github.png" height="50px" width="50px" onclick="GitHub();"/>
+			</span>
+			<span title="Resume">
 			<img class="img-button social" id="rButton" src="./assets/img/resume.png" height="50px" width="50px" onclick="Resume();"/>
+			</span>
+			<span title="LinkedIn">
 			<img class="img-button social" id="liButton" src="./assets/img/linkedin.png" height="50px" width="50px" onclick="LinkedIn();"/>
+			</span>
 
 
 <!-- 			<div id="ghGlow" height="50px" width="50px"></div>
@@ -62,7 +99,7 @@
 		</div>
 	</div>
 
-	<div id="bio-button" type="button" onclick="revealBio();">
+	<div id="bio-button" type="button" onclick="descend();">
 		<h2>About Me!</h2>
 		<!-- 840x859 -->
 		<img background="transparent" src="./assets/img/down-arrow.png" height="12px" width="30px">
@@ -71,30 +108,42 @@
 
 	<div id="back-button" type="button" onclick="goBack();">
 		<img background="transparent" id="up" src="./assets/img/down-arrow.png" height="12px" width="30px">
-		<h2>Back</h2>
+		<h2>Home</h2>
 		<!-- 840x859 -->
 		
 	</div>
 
 	<div id="bio">
-		<h2>Hi, I'm Alex!</h2>
-		<p>
-		I'm a 19 year old Math and Computer Science Major from Wayland, MA, currently living in Pittsburgh, PA at Carnegie Mellon University. I really enjoy coding and problem solving, and have done a couple hackathons and made a couple projects, including this website. My first programming language I learned was Java, so that is the one that I'm most familiar with and my favorite one to program in, but I've learned some other ones along the way, including Python and the HTML, CSS, JS set (still learning the libraries of JS though) through classes, projects, and self-study. I'm also very interested in biology, and I have published a first-author research paper in the journal "Purinergic Signaling" and several co-authored research papers.
-		</p>
-		<p>
-			Some fun facts about me: I'm a musician; I've played the piano for 16 years and the violin for 11 years. At some point, I will probably include some of my playing on the website. Also, since I'm from Boston, I'm a pretty big Celtics fan, and as of the time I am writing this, their season is going well, so shout out to them.
-		</p>
-		<p>
-			As a side note, some of my projects are currently in the process of being added to my github, so don't fret if there is nothing there (since most of my projects are on my computer's hard drive). The projects will be uploaded shortly, including the code for this website. 
-		</p>
+		<div>
+			<h2>Hi, I'm Alex!</h2>
+			<p>
+			I'm a Math and Computer Science Major from Wayland, MA, currently living in Pittsburgh, PA at Carnegie Mellon University. I really enjoy coding and problem solving, and have done a couple hackathons and made a couple projects, including this website. My first programming language I learned was Java, so that is the one that I'm most familiar with and my favorite one to program in, but I've learned some other ones along the way, including Python and the HTML, CSS, JS set (still learning the libraries of JS though) through classes, projects, and self-study. I'm also very interested in biology, and I have published a first-author research paper in the journal "Purinergic Signaling" and several co-authored research papers.
+			</p>
+			<p>
+				Some fun facts about me: I'm a musician; I've played the piano for 16 years and the violin for 11 years. At some point, I will probably include some of my playing on the website. Also, since I'm from Boston, I'm a pretty big Celtics fan, and as of the time I am writing this, their season is going well, so shout out to them.
+			</p>
+			<p>
+				As a side note, some of my projects are currently in the process of being added to my github, so don't fret if there is nothing there (since most of my projects are on my computer's hard drive). The projects will be uploaded shortly, including the code for this website. 
+			</p>
+		</div>
 	</div>
 
 <!-- Contact information + form -->
-<!-- 
-<form> 
-<h2>Contact me!</h2>
-</form>
--->
+<!-- <div id="contact">
+	<h2>Contact me!</h2>
+	<form onsubmit="return false"> 
+		<input type="text" placeholder="Last Name" name="Last Name" id="lastName"/>
+		<br><br>
+		<input type="text" placeholder="First Name" name="Last Name" id="firstName"/>
+		<br><br>
+		<input type="text" placeholder="Organization/Company" name="Organization" id="org"/>
+		<br><br>
+		<input type="text" placeholder="Email Address" id="emailAddress">
+		<br><br>
+		<button onclick="sendContact();">Send Contact</button>
+	</form>
+</div> -->
+
 </body>
 
 
