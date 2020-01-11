@@ -10,6 +10,8 @@
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap" rel="stylesheet">
 	<!-- <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet"> -->
 
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
 	<!-- JS libraries -->
 	<!-- <script src="https://unpkg.com/aos@next/dist/aos.js" defer></script> -->
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" defer></script>
@@ -20,8 +22,8 @@
 
 <body> 
 	<!-- First Layer -->
-	<img class="background" id="stars" src="./assets/img/background-better.png">
-	<img class="background overlay" id="clouds" src="./assets/img/clouds-extended.png">
+	<img class="background" id="stars" style="height: 100%;" src="./assets/img/background-better.png">
+	<img class="background overlay" id="clouds" style="height: 124.5%;" src="./assets/img/clouds-extended.png">
 
 	<!-- Second Layer -->
 	<h3 class="links" id="rp" style="top:1730px; left:560px; color: #0cbfe9; text-shadow: 0 0 5px #0cbfe9;" onclick="Paper();"><span>Re</span>search Pa<span>pe</span>r</h3>
@@ -34,6 +36,7 @@
 	<!-- <img id="building2" src='./assets/img/building2.png'> -->
 	<!-- <img id="building1" src='./assets/img/buildings_1.png'> -->
 	<img class="background2" src='./assets/img/buildings-test.png'>
+	<canvas class="background2" id="canvas" width="80" height="80" style="position: absolute; top: 1365px; left: 809px;"></canvas>
 	<!-- style="top: 800px;" -->
 	<!-- style="top: 1300px;" -->
 
@@ -117,10 +120,10 @@
 		<div>
 			<h2>Hi, I'm Alex!</h2>
 			<p>
-			I'm a Math and Computer Science Major from Wayland, MA, currently living in Pittsburgh, PA at Carnegie Mellon University. I really enjoy coding and problem solving, and have done a couple hackathons and made a couple projects, including this website. My first programming language I learned was Java, so that is the one that I'm most familiar with and my favorite one to program in, but I've learned some other ones along the way, including Python and the HTML, CSS, JS set (still learning the libraries of JS though) through classes, projects, and self-study. I'm also very interested in biology, and I have published a first-author research paper in the journal "Purinergic Signaling" and several co-authored research papers.
+				I'm a Math and Computer Science Major from Wayland, MA, currently living in Pittsburgh, PA at Carnegie Mellon University. I really enjoy coding and problem solving, and have done a couple hackathons and made a couple projects, including this website. My first programming language I learned was Java, so that is the one that I'm most familiar with and my favorite one to program in, but I've learned some other ones along the way, including Python and the HTML, CSS, JS set (still learning the libraries of JS though) through classes, projects, and self-study. I'm also interested in biology, and I have published a first-author research paper about a pancreatic enzyme called CD39L3 in the journal "Purinergic Signaling" as well as several co-authored research papers.
 			</p>
 			<p>
-				Some fun facts about me: I'm a musician; I've played the piano for 16 years and the violin for 11 years. At some point, I will probably include some of my playing on the website. Also, since I'm from Boston, I'm a pretty big Celtics fan, and as of the time I am writing this, their season is going well, so shout out to them.
+				FUN FACTS: I'm a musician; I've played the piano for 16 years and the violin for 11 years. At some point, I will probably include some of my playing on the website. Also, since I'm from Boston, I'm a pretty big Celtics fan, and as of the time I am writing this, their season is going well, so shout out to them.
 			</p>
 			<p>
 				As a side note, some of my projects are currently in the process of being added to my github, so don't fret if there is nothing there (since most of my projects are on my computer's hard drive). The projects will be uploaded shortly, including the code for this website. 
