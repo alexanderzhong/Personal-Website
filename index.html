@@ -10,7 +10,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap" rel="stylesheet">
 	<!-- <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet"> -->
 
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
 
 	<!-- JS libraries -->
 	<!-- <script src="https://unpkg.com/aos@next/dist/aos.js" defer></script> -->
@@ -22,11 +22,12 @@
 
 <body> 
 	<!-- First Layer -->
-	<img class="background" id="stars" style="height: 100%;" src="./assets/img/background-better.png">
-	<img class="background overlay" id="clouds" style="height: 124.5%;" src="./assets/img/clouds-extended.png">
+	<img class="background" id="stars" src="./assets/img/background-better.png">
+	<img class="background overlay" id="clouds" style="width: max(100vw, 1620px); height: max(124.5vh, 938px);" src="./assets/img/clouds-extended.png">
+	<!-- style="height: 100%;" -->
 
 	<!-- Second Layer -->
-	<h3 class="links" id="rp" style="top:1730px; left:560px; color: #0cbfe9; text-shadow: 0 0 5px #0cbfe9;" onclick="Paper();"><span>Re</span>search Pa<span>pe</span>r</h3>
+	<h3 class="links" id="rp" style="top:1730px; left:560px; color: #0cbfe9; text-shadow: 0 0 5px #0cbfe9;" onclick="Paper();"><span>Po</span>rtf<span>ol</span>io</h3>
 	<h3 class="links" id="ab" style="top:1765px; left:777px; color: #8CFF00; text-shadow: 0 0 5px #8CFF00;" onclick="bioToggle();">Ab<span>o</span>ut</h3>
 	<h3 class="links" id="co" style="top:1745px; left:1005px; color: #CE00FF; text-shadow: 0 0 5px #CE00FF;" onclick="openMail();">Con<span>t</span>ac<span>t</span></h3>
 	<!-- onclick="contactToggle();" -->
@@ -35,8 +36,10 @@
 	<!-- <img id="bridge" src="./assets/img/bridge.png"> -->
 	<!-- <img id="building2" src='./assets/img/building2.png'> -->
 	<!-- <img id="building1" src='./assets/img/buildings_1.png'> -->
-	<img class="background2" src='./assets/img/buildings-test.png'>
-	<canvas class="background2" id="canvas" width="80" height="80" style="position: absolute; top: 1365px; left: 809px;"></canvas>
+	<img class="background2" id="cityline" src='./assets/img/buildings-test.png'>
+	<canvas class="background2" id="canvas" width="80" height="80" style="position: absolute; top: 1365px; left: 809px; width: 80px; height: 80px"></canvas>
+	<!-- 1365px -->
+	<!-- <canvas class="background2" id="canvas" width="80px" height="80px" style="position: absolute; top: 145.5vh; left: 49.9vw;"></canvas> -->
 	<!-- style="top: 800px;" -->
 	<!-- style="top: 1300px;" -->
 
@@ -56,7 +59,7 @@
 			<h1>My Resume</h1>
 			<img id="close_resume" src="./assets/img/close.png" style="width: 15px; height: 15px; margin-left: 750px" onclick="closeResume();">
 		</div>
-		<embed id="resume-display" src="assets/documents/SophomoreResumeV3.pdf" type="application/pdf">
+		<embed id="resume-display" src="assets/documents/SophomoreResumeSWE.pdf" type="application/pdf">
 		</embed>
 	</div>
 
@@ -82,13 +85,13 @@
 <!-- Buttons for other socials -->
 		<div class="button-container">
 			<span title="GitHub">
-			<img class="img-button social" id="ghButton" src="./assets/img/github.png" height="50px" width="50px" onclick="GitHub();"/>
+			<img class="img-button social" id="ghButton" src="./assets/img/github.png" onclick="GitHub();"/>
 			</span>
 			<span title="Resume">
-			<img class="img-button social" id="rButton" src="./assets/img/resume.png" height="50px" width="50px" onclick="Resume();"/>
+			<img class="img-button social" id="rButton" src="./assets/img/resume.png" onclick="Resume();"/>
 			</span>
 			<span title="LinkedIn">
-			<img class="img-button social" id="liButton" src="./assets/img/linkedin.png" height="50px" width="50px" onclick="LinkedIn();"/>
+			<img class="img-button social" id="liButton" src="./assets/img/linkedin.png" onclick="LinkedIn();"/>
 			</span>
 
 
